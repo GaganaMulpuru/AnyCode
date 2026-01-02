@@ -1,0 +1,62 @@
+import java.text.SimpleDateFormat;
+    import java.util.Date;
+    import java.util.List;
+
+    import sailpoint.api.SailPointContext;
+    import sailpoint.object.Application;
+    import sailpoint.object.Attributes;
+    import sailpoint.object.ProvisioningPlan;
+    import sailpoint.object.ProvisioningPlan.AccountRequest;
+    import sailpoint.object.ProvisioningPlan.AttributeRequest;
+    import sailpoint.tools.Util;
+
+
+    log.error("Input plan :: "+plan.toXml());  
+
+       Attributes planArgs = null != plan.getArguments()? plan.getArguments(): new Attributes();
+      //log.error("Plan Argument ::: "+planArgs);
+      List accReqLst = plan.getAccountRequests();
+      if(!Util.isEmpty(accReqLst)) {
+        for(AccountRequest accReq : accReqLst) {
+          accReq.setOperation(ProvisioningPlan.AccountRequest.Operation.Modify);     
+          List attReqLst = accReq.getAttributeRequests("Role");
+          if(!Util.isEmpty(accReqLst)) {
+            for(AttributeRequest attReq : attReqLst) {
+              if(ProvisioningPlan.Operation.Add.equals(attReq.getOperation())|| ProvisioningPlan.Operation.Remove.equals(attReq.getOperation())){
+                Attributes args= attReq.getArguments();
+                Object attValueObj = attReq.getValue();
+                if(null !=attValueObj) {              
+                  List lstObj = Util.otol(attValueObj);
+                  List indReqList = new ArrayList();
+                  for(String value : lstObj) {
+                    String[] role = value.split("_");
+                    if(role.length >1) {
+                      AttributeRequest tmpReq  = new AttributeRequest(attReq.getName(),attReq.getOperation(),value);
+                       Attributes tempArgs= new Attributes();
+                        if(!Util.isEmpty(args))	{
+                          tempArgs.putAll(args);
+                          }
+                        tempArgs.put("roleId", role[0]);
+                        tempArgs.put("accessScopeId", role[1]);
+                       if(planArgs.containsKey(value)) {
+                          tempArgs.put("expiryDate", planArgs.get(value));
+                       }else{
+                        tempArgs.put("expiryDate", "2025-08-01");
+                       }
+                        tmpReq.setArguments(tempArgs);
+                        indReqList.add(tmpReq);
+                    }
+                  }
+                  accReq.remove(attReq);
+                  accReq.addAll(indReqList);
+                }
+               //log.error("Argument value ::: "+args);
+              }
+            }
+
+          }
+        }
+
+      }
+
+    log.error("outPut plan :: "+plan.toXml());
