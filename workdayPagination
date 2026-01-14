@@ -1,0 +1,3 @@
+TERMINATE_IF $response.wd:Response_Results.wd:Page$ >= $response.wd:Response_Results.wd:Total_Pages$
+$offset$ = $response.wd:Response_Results.wd:Page$ + 1
+$request.bsvc:Response_Filter.bsvc:Page.text()[1]$ = $offset$
