@@ -4,3 +4,8 @@ $request.bsvc:Response_Filter.bsvc:Page.text()[1]$ = $offset$
 
 
 Error: javax.xml.xpath.XPathExpressionException: net.sf.saxon.trans.XPathException: Namespace prefix 'wd' has not been declared
+
+
+TERMINATE_IF $response.Response_Results.Page$ >= $response.Response_Results.Total_Pages$
+$offset$ = $response.Response_Results.Page$ + 1
+$request.Response_Filter.Page.text()[1]$ = $offset$
