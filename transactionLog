@@ -1,0 +1,23 @@
+<wd:Transaction_Log_Data>
+<wd:Transaction_Log_Description>Exit: I05-001--21-First Name INTG605-001-21-Last Name</wd:Transaction_Log_Description>
+<wd:Transaction_Effective_Moment>2025-10-23T00:00:00.000-07:00</wd:Transaction_Effective_Moment>
+<wd:Transaction_Entry_Moment>2025-12-19T01:17:32.214-08:00</wd:Transaction_Entry_Moment>
+<wd:Transaction_Log_Type_Reference>
+<wd:ID wd:type="WID">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</wd:ID>
+<wd:ID wd:type="Business_Process_Type">Terminate Employee</wd:ID>
+</wd:Transaction_Log_Type_Reference>
+<wd:Transaction_Target_Reference>
+<wd:ID wd:type="WID">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</wd:ID>
+<wd:ID wd:type="Employee_ID">6500xxx</wd:ID>
+</wd:Transaction_Target_Reference>
+<wd:Transaction_Target_Reference>
+<wd:ID wd:type="WID">xxxxxxxxxxxxxxxx</wd:ID>
+<wd:ID wd:type="Position_ID">P-xxx0500121</wd:ID>
+</wd:Transaction_Target_Reference>
+<wd:Transaction_Target_Reference>
+<wd:ID wd:type="WID">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</wd:ID>
+<wd:ID wd:type="Organization_Reference_ID">Sxx-017540</wd:ID>
+</wd:Transaction_Target_Reference>
+<wd:Is_Rescind_Or_Rescinded>0</wd:Is_Rescind_Or_Rescinded>
+<wd:Is_Correction_Or_Corrected>0</wd:Is_Correction_Or_Corrected>
+</wd:Transaction_Log_Data>
