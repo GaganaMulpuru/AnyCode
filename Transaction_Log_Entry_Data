@@ -1,4 +1,9 @@
+wd:Transaction_Log_Entry_Data/wd:Transaction_Log_Entry/wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type='Business_Process_Type']/text()
+
+
 wd:Transaction_Log_Entry_Data[wd:Transaction_Log_Entry[wd:Transaction_Log_Data[wd:Transaction_Log_Type_Reference/wd:ID[@wd:type='Business_Process_Type']]]]/wd:Value
+
+
 <wd:Transaction_Log_Entry_Data>
 <wd:Transaction_Log_Entry>
 <wd:Transaction_Log_Reference>
