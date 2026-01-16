@@ -1,0 +1,25 @@
+
+<wd:Transaction_Log_Entry_Data>
+<wd:Transaction_Log_Entry>
+<wd:Transaction_Log_Reference>
+<wd:ID wd:type="WID">05ebe34b54111002112637446ba40000</wd:ID>
+</wd:Transaction_Log_Reference>
+<wd:Transaction_Log_Data>
+<wd:Transaction_Log_Description>Edit Other IDs: INTSG605-001-HDB-2-First Name INTSG605-001-HDB-2-Last Name</wd:Transaction_Log_Description>
+<wd:Transaction_Entry_Moment>2025-12-19T01:38:49.297-08:00</wd:Transaction_Entry_Moment>
+<wd:Transaction_Log_Type_Reference>
+<wd:ID wd:type="WID">b9fd84ec46254505a0c3722ef5ad8280</wd:ID>
+<wd:ID wd:type="Business_Process_Type">Edit Other IDs for Worker</wd:ID>
+</wd:Transaction_Log_Type_Reference>
+<wd:Transaction_Target_Reference>
+<wd:ID wd:type="WID">05ebe34b54111001bf84ce2065530000</wd:ID>
+</wd:Transaction_Target_Reference>
+<wd:Transaction_Target_Reference>
+<wd:ID wd:type="WID">b566bcfcda721001f56e709a88c70000</wd:ID>
+<wd:ID wd:type="Employee_ID">60500102</wd:ID>
+</wd:Transaction_Target_Reference>
+<wd:Is_Rescind_Or_Rescinded>0</wd:Is_Rescind_Or_Rescinded>
+<wd:Is_Correction_Or_Corrected>0</wd:Is_Correction_Or_Corrected>
+</wd:Transaction_Log_Data>
+</wd:Transaction_Log_Entry>
+</wd:Transaction_Log_Entry_Data>
