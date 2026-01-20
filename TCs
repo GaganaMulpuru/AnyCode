@@ -1,0 +1,41 @@
+S/No	Description / Function	Instructions	Expected Result	Actual Result
+1	Connectivity	"a.) Loginto IDAMS 
+b.) Goto ""Applications"" -> Application Definition
+c.) Search ""Workday""
+d.) Configuration --> Settings --> Test Connection
+"	Test Connection Successful	Test Connection Successful
+2	Fetch Account staffId, WorkerID, User_ID, Supervisor, FirstName, LastName, FullName	"a.) Loginto IDAMS 
+b.) Goto ""Applications"" -> Application Definition
+c.) Search ""Workday""
+d.) Configuration --> Schema --> Add staffId, WorkerID, User_ID, Supervisor, FirstName, LastName, FullName attributes in Schema --> Save
+"	Account staffId, WorkerID, User_ID, Supervisor, FirstName, LastName, FullName  fetched	Account staffId, WorkerID, User_ID, Supervisor, FirstName, LastName, FullName  fetched
+3	Fetch Account Date Join HDB, Date Left Service	"a.) Loginto IDAMS 
+b.) Goto ""Applications"" -> Application Definition
+c.) Search ""Workday""
+d.) Configuration --> Schema --> Add Date Join HDB, Date Left Service attributes in Schema --> Save
+"	Account Date Join HDB, Date Left Service  fetched	Account Date Join HDB, Date Left Service  fetched
+4	Fetch Custom Account Info Team Id, Team Long Form, Team Short Form, Section Id, Section Long Form, Section Short Form, Group Id, Group Long Form, Group Short Form	"a.) Loginto IDAMS 
+b.) Goto ""Applications"" -> Application Definition
+c.) Search ""Workday""
+d.) Configuration --> Schema --> Add Team Id, Team Long Form, Team Short Form, Section Id, Section Long Form, Section Short Form, Group Id, Group Long Form, Group Short Form, Division Id, Division Long Form, Division Short Form, Department Id, Department Long Form, Department Short Form, Designation Long Form, Designation Short Form attributes in Schema --> Save
+"	Account Team Id, Team Long Form, Team Short Form, Section Id, Section Long Form, Section Short Form, Group Id, Group Long Form, Group Short Form, Division Id, Division Long Form, Division Short Form, Department Id, Department Long Form, Department Short Form, Designation Long Form, Designation Short Form  fetched	Account Team Id, Team Long Form, Team Short Form, Section Id, Section Long Form, Section Short Form, Group Id, Group Long Form, Group Short Form, Division Id, Division Long Form, Division Short Form, Department Id, Department Long Form, Department Short Form, Designation Long Form, Designation Short Form fetched
+5	Fetch Custom Account Info Division Id, Division Long Form, Division Short Form, Department Id, Department Long Form, Department Short Form, Designation Long Form, Designation Short Form	"a.) Loginto IDAMS 
+b.) Goto ""Applications"" -> Application Definition
+c.) Search ""Workday""
+d.) Configuration --> Schema --> Add Division Id, Division Long Form, Division Short Form, Department Id, Department Long Form, Department Short Form, Designation Long Form, Designation Short Form attributes in Schema --> Save
+"	Account Division Id, Division Long Form, Division Short Form, Department Id, Department Long Form, Department Short Form, Designation Long Form, Designation Short Form  fetched	Account Division Id, Division Long Form, Division Short Form, Department Id, Department Long Form, Department Short Form, Designation Long Form, Designation Short Form  fetched
+6	Read Transaction Log and Fetch "Transfer Employee" Business Process Type	"a.) Loginto IDAMS 
+b.) Goto ""Applications"" -> Application Definition
+c.) Search ""Workday""
+d.) Configuration --> Schema --> Add ""Business Process Type"" attribute in Schema --> Save
+"	Able to read transaction log and fetch "Transfer Employee" business process type	Able to read transaction log and fetch "Transfer Employee" business process type
+7	Pagination	"a.) Loginto IDAMS 
+b.) Goto ""Applications"" -> Application Definition
+c.) Search ""Workday""
+d.) Configuration --> Settings --> Update ""Account Aggregation"" Operation  --> Paging --> Save
+"	Able to fetch all accounts	Able to fetch all accounts
+8	Accounts Aggregation	"a.) Loginto IDAMS 
+b.) Goto ""Setup"" -> Tasks
+c.) Search ""HDB Workday""
+d.) Right Click --> Execute in Background
+"	Aggregation is Successful	Aggregation is Successful <=15 Mins
