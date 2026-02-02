@@ -1,0 +1,26 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+// Calculate currentdate - 60
+Calendar fromCal = Calendar.getInstance();
+fromCal.add(Calendar.DAY_OF_MONTH, -60);
+String asOfDateFrom = sdf.format(fromCal.getTime());
+
+// Calculate currentdate + 90
+Calendar toCal = Calendar.getInstance();
+toCal.add(Calendar.DAY_OF_MONTH, 90);
+String asOfDateTo = sdf.format(toCal.getTime());
+
+// Inject into request
+String body = requestEndPoint.getBody();
+
+body = body.replace("${AS_OF_FROM}", asOfDateFrom + "T00:00:00");
+body = body.replace("${AS_OF_TO}", toCal.getTime());
+
+requestEndPoint.setBody(body);
+
+
+
+<wd:As_Of_Effective_Date>${AS_OF_FROM}</wd:As_Of_Effective_Date>
