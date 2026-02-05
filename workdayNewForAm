@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.webservices.WebServicesConnector" created="1763354256212" featuresString="PROVISIONING, ENABLE, PASSWORD, AUTHENTICATE, UNLOCK" id="0a49ce319a8112a4819a901aa3541627" modified="1770204719031" name="Workday" profileClass="" significantModified="1770204719031" type="Web Services">
+  <Attributes>
+    <Map>
+      <entry key="afterProvisioningRule"/>
+      <entry key="aggregationPartitioned">
+        <value>
+          <Boolean></Boolean>
+        </value>
+      </entry>
+      <entry key="aggregationType" value="account"/>
+      <entry key="authenticationMethod" value="OAuth2Login"/>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="clientCertAuthEnabled">
+        <value>
+          <Boolean></Boolean>
+        </value>
+      </entry>
+      <entry key="client_id"/>
+      <entry key="client_secret" value="1:ACP:i8eqFO1J7ap8Yg7AuKkWG9VagNm5Qpia266o1QD5HII="/>
+      <entry key="compositeDefinition"/>
+      <entry key="connectionParameters">
+        <value>
+          <List>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA; &lt;env:Envelope xmlns:env=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;>&#xD;&#xA;&lt;env:Body>&#xD;&#xA;&lt;wd:Get_Workers_Request xmlns:wd=&quot;urn:com.workday/bsvc&quot; wd:version=&quot;v45.0&quot;>&#xD;&#xA;             &lt;wd:Request_Criteria>&#xD;&#xA;                 &lt;wd:Transaction_Log_Criteria_Data>&#xD;&#xA;&lt;wd:Transaction_Date_Range_Data>&#xD;&#xA;&lt;wd:Effective_From>2025-08-08T01:00:00.000-07:00&lt;/wd:Effective_From>&#xD;&#xA;&lt;wd:Effective_Through>2025-12-06T22:59:59.000-08:00&lt;/wd:Effective_Through>&#xD;&#xA;&lt;/wd:Transaction_Date_Range_Data>&#xD;&#xA;&lt;/wd:Transaction_Log_Criteria_Data>&#xD;&#xA;  &lt;wd:Organization_Reference>&#xD;&#xA;&lt;wd:ID wd:type=&quot;Organization_Reference_ID&quot;>S-10016637&lt;/wd:ID>&#xD;&#xA;&lt;/wd:Organization_Reference>&#xD;&#xA;                 &lt;wd:Include_Subordinate_Organizations>true&lt;/wd:Include_Subordinate_Organizations>&#xD;&#xA;                 &lt;wd:Field_And_Parameter_Criteria_Data>&#xD;&#xA;&lt;wd:Provider_Reference>&#xD;&#xA;&lt;wd:ID wd:type=&quot;Integration_System_ID&quot;>&#xD;&#xA;                            INTSG605_HDB_001_API_SailPoint_Get_Worker_Outbound&#xD;&#xA;&lt;/wd:ID>&#xD;&#xA;&lt;/wd:Provider_Reference>&#xD;&#xA;&lt;/wd:Field_And_Parameter_Criteria_Data>&#xD;&#xA;                 &lt;wd:Exclude_Inactive_Workers>false&lt;/wd:Exclude_Inactive_Workers>&#xD;&#xA;&lt;wd:Exclude_Employees>false&lt;/wd:Exclude_Employees>&#xD;&#xA;&lt;wd:Exclude_Contingent_Workers>false&lt;/wd:Exclude_Contingent_Workers>&#xD;&#xA;             &lt;/wd:Request_Criteria>&#xD;&#xA;             &lt;wd:Response_Filter>&#xD;&#xA;&lt;wd:Page>1&lt;/wd:Page>&#xD;&#xA;&lt;wd:Count>1&lt;/wd:Count>&#xD;&#xA;&lt;wd:As_Of_Effective_Date>2025-11-02+08:00&lt;/wd:As_Of_Effective_Date>&#xD;&#xA;&lt;/wd:Response_Filter>&#xD;&#xA;             &lt;wd:Response_Group>&#xD;&#xA;&lt;wd:Include_Additional_Jobs>true&lt;/wd:Include_Additional_Jobs>&#xD;&#xA;&lt;wd:Exclude_Companies>false&lt;/wd:Exclude_Companies>&#xD;&#xA;&lt;wd:Exclude_Company_Hierarchies>true&lt;/wd:Exclude_Company_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Cost_Center_Hierarchies>false&lt;/wd:Exclude_Cost_Center_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Cost_Centers>false&lt;/wd:Exclude_Cost_Centers>&#xD;&#xA;&lt;wd:Exclude_Custom_Organizations>false&lt;/wd:Exclude_Custom_Organizations>&#xD;&#xA;&lt;wd:Exclude_Location_Hierarchies>true&lt;/wd:Exclude_Location_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Matrix_Organizations>true&lt;/wd:Exclude_Matrix_Organizations>&#xD;&#xA;&lt;wd:Exclude_Organization_Support_Role_Data>true&lt;/wd:Exclude_Organization_Support_Role_Data>&#xD;&#xA;&lt;wd:Exclude_Pay_Groups>true&lt;/wd:Exclude_Pay_Groups>&#xD;&#xA;&lt;wd:Exclude_Region_Hierarchies>true&lt;/wd:Exclude_Region_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Regions>true&lt;/wd:Exclude_Regions>&#xD;&#xA;&lt;wd:Exclude_Supervisory_Organizations>false&lt;/wd:Exclude_Supervisory_Organizations>&#xD;&#xA;&lt;wd:Exclude_Teams>true&lt;/wd:Exclude_Teams>&#xD;&#xA;&lt;wd:Include_Account_Provisioning>false&lt;/wd:Include_Account_Provisioning>&#xD;&#xA;&lt;wd:Include_Background_Check_Data>false&lt;/wd:Include_Background_Check_Data>&#xD;&#xA;&lt;wd:Include_Benefit_Eligibility>true&lt;/wd:Include_Benefit_Eligibility>&#xD;&#xA;&lt;wd:Include_Benefit_Enrollments>false&lt;/wd:Include_Benefit_Enrollments>&#xD;&#xA;&lt;wd:Include_Career>false&lt;/wd:Include_Career>&#xD;&#xA;&lt;wd:Include_Compensation>false&lt;/wd:Include_Compensation>&#xD;&#xA;&lt;wd:Include_Development_Items>false&lt;/wd:Include_Development_Items>&#xD;&#xA;&lt;wd:Include_Employee_Contract_Data>false&lt;/wd:Include_Employee_Contract_Data>&#xD;&#xA;&lt;wd:Include_Employee_Review>false&lt;/wd:Include_Employee_Review>&#xD;&#xA;&lt;wd:Include_Employment_Information>true&lt;/wd:Include_Employment_Information>&#xD;&#xA;&lt;wd:Include_Feedback_Received>false&lt;/wd:Include_Feedback_Received>&#xD;&#xA;&lt;wd:Include_Goals>false&lt;/wd:Include_Goals>&#xD;&#xA;&lt;wd:Include_Management_Chain_Data>true&lt;/wd:Include_Management_Chain_Data>&#xD;&#xA;&lt;wd:Include_Organizations>true&lt;/wd:Include_Organizations>&#xD;&#xA;&lt;wd:Include_Personal_Information>true&lt;/wd:Include_Personal_Information>&#xD;&#xA;&lt;wd:Include_Qualifications>false&lt;/wd:Include_Qualifications>&#xD;&#xA;&lt;wd:Include_Reference>false&lt;/wd:Include_Reference>&#xD;&#xA;&lt;wd:Include_Related_Persons>false&lt;/wd:Include_Related_Persons>&#xD;&#xA;&lt;wd:Include_Roles>false&lt;/wd:Include_Roles>&#xD;&#xA;&lt;wd:Include_Skills>false&lt;/wd:Include_Skills>&#xD;&#xA;&lt;wd:Include_Succession_Profile>false&lt;/wd:Include_Succession_Profile>&#xD;&#xA;&lt;wd:Include_Talent_Assessment>false&lt;/wd:Include_Talent_Assessment>&#xD;&#xA;&lt;wd:Include_User_Account>true&lt;/wd:Include_User_Account>&#xD;&#xA;&lt;wd:Include_Worker_Documents>false&lt;/wd:Include_Worker_Documents>&#xD;&#xA;&lt;wd:Include_Transaction_Log_Data>true&lt;/wd:Include_Transaction_Log_Data>&#xD;&#xA;&lt;/wd:Response_Group>&#xD;&#xA;         &lt;/wd:Get_Workers_Request>&#xD;&#xA;&lt;/env:Body>&#xD;&#xA;&lt;/env:Envelope>"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/human_resourcesservice/Get_Workers"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean></Boolean>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Authorization" value="$application.accesstoken$"/>
+                    <entry key="Content-Type" value="application/xml"/>
+                    <entry key="X-IBM-Client-Id" value="1d39c88225c79f228a6859a91b4a1a94"/>
+                    <entry key="X-IBM-Client-Secret" value="8769072902801fb3f70dcb3217ea3e9e"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="POST"/>
+              <entry key="operationType" value="Test Connection"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj"/>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath"/>
+              <entry key="sequenceNumberForEndpoint" value="1"/>
+              <entry key="uniqueNameForEndPoint" value="Test Connection"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule" value="HDB_Workday_Before_Operation_Rule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA; &lt;env:Envelope xmlns:env=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;>&#xD;&#xA;&lt;env:Body>&#xD;&#xA;&lt;wd:Get_Workers_Request xmlns:wd=&quot;urn:com.workday/bsvc&quot; wd:version=&quot;v45.0&quot;>&#xD;&#xA;&lt;wd:Response_Filter>&#xD;&#xA;&lt;wd:Page>1&lt;/wd:Page>&#xD;&#xA;&lt;wd:Count>20&lt;/wd:Count>&#xD;&#xA;&lt;wd:As_Of_Effective_Date>${AS_OF_FROM}&lt;/wd:As_Of_Effective_Date>&#xD;&#xA;&lt;/wd:Response_Filter>&#xD;&#xA;             &lt;wd:Request_Criteria>&#xD;&#xA;                 &lt;wd:Transaction_Log_Criteria_Data>&#xD;&#xA;&lt;wd:Transaction_Date_Range_Data>&#xD;&#xA;&lt;wd:Effective_From>2025-10-08T01:00:00.000-07:00&lt;/wd:Effective_From>&#xD;&#xA;&lt;wd:Effective_Through>2026-03-22T22:59:59.000-08:00&lt;/wd:Effective_Through>&#xD;&#xA;&lt;/wd:Transaction_Date_Range_Data>&#xD;&#xA;&lt;/wd:Transaction_Log_Criteria_Data>&#xD;&#xA;  &lt;wd:Organization_Reference>&#xD;&#xA;&lt;wd:ID wd:type=&quot;Organization_Reference_ID&quot;>S-10016637&lt;/wd:ID>&#xD;&#xA;&lt;/wd:Organization_Reference>&#xD;&#xA;                 &lt;wd:Include_Subordinate_Organizations>true&lt;/wd:Include_Subordinate_Organizations>&#xD;&#xA;                 &lt;wd:Field_And_Parameter_Criteria_Data>&#xD;&#xA;&lt;wd:Provider_Reference>&#xD;&#xA;&lt;wd:ID wd:type=&quot;Integration_System_ID&quot;>&#xD;&#xA;                            INTSG605_HDB_001_API_SailPoint_Get_Worker_Outbound&#xD;&#xA;&lt;/wd:ID>&#xD;&#xA;&lt;/wd:Provider_Reference>&#xD;&#xA;&lt;/wd:Field_And_Parameter_Criteria_Data>&#xD;&#xA;                 &lt;wd:Exclude_Inactive_Workers>false&lt;/wd:Exclude_Inactive_Workers>&#xD;&#xA;&lt;wd:Exclude_Employees>false&lt;/wd:Exclude_Employees>&#xD;&#xA;&lt;wd:Exclude_Contingent_Workers>false&lt;/wd:Exclude_Contingent_Workers>&#xD;&#xA;             &lt;/wd:Request_Criteria>&#xD;&#xA;             &lt;wd:Response_Group>&#xD;&#xA;&lt;wd:Include_Additional_Jobs>true&lt;/wd:Include_Additional_Jobs>&#xD;&#xA;&lt;wd:Exclude_Companies>false&lt;/wd:Exclude_Companies>&#xD;&#xA;&lt;wd:Exclude_Company_Hierarchies>true&lt;/wd:Exclude_Company_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Cost_Center_Hierarchies>false&lt;/wd:Exclude_Cost_Center_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Cost_Centers>false&lt;/wd:Exclude_Cost_Centers>&#xD;&#xA;&lt;wd:Exclude_Custom_Organizations>false&lt;/wd:Exclude_Custom_Organizations>&#xD;&#xA;&lt;wd:Exclude_Location_Hierarchies>true&lt;/wd:Exclude_Location_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Matrix_Organizations>true&lt;/wd:Exclude_Matrix_Organizations>&#xD;&#xA;&lt;wd:Exclude_Organization_Support_Role_Data>true&lt;/wd:Exclude_Organization_Support_Role_Data>&#xD;&#xA;&lt;wd:Exclude_Pay_Groups>true&lt;/wd:Exclude_Pay_Groups>&#xD;&#xA;&lt;wd:Exclude_Region_Hierarchies>true&lt;/wd:Exclude_Region_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Regions>true&lt;/wd:Exclude_Regions>&#xD;&#xA;&lt;wd:Exclude_Supervisory_Organizations>false&lt;/wd:Exclude_Supervisory_Organizations>&#xD;&#xA;&lt;wd:Exclude_Teams>true&lt;/wd:Exclude_Teams>&#xD;&#xA;&lt;wd:Include_Account_Provisioning>false&lt;/wd:Include_Account_Provisioning>&#xD;&#xA;&lt;wd:Include_Background_Check_Data>false&lt;/wd:Include_Background_Check_Data>&#xD;&#xA;&lt;wd:Include_Benefit_Eligibility>true&lt;/wd:Include_Benefit_Eligibility>&#xD;&#xA;&lt;wd:Include_Benefit_Enrollments>false&lt;/wd:Include_Benefit_Enrollments>&#xD;&#xA;&lt;wd:Include_Career>false&lt;/wd:Include_Career>&#xD;&#xA;&lt;wd:Include_Compensation>false&lt;/wd:Include_Compensation>&#xD;&#xA;&lt;wd:Include_Development_Items>false&lt;/wd:Include_Development_Items>&#xD;&#xA;&lt;wd:Include_Employee_Contract_Data>false&lt;/wd:Include_Employee_Contract_Data>&#xD;&#xA;&lt;wd:Include_Employee_Review>false&lt;/wd:Include_Employee_Review>&#xD;&#xA;&lt;wd:Include_Employment_Information>true&lt;/wd:Include_Employment_Information>&#xD;&#xA;&lt;wd:Include_Feedback_Received>false&lt;/wd:Include_Feedback_Received>&#xD;&#xA;&lt;wd:Include_Goals>false&lt;/wd:Include_Goals>&#xD;&#xA;&lt;wd:Include_Management_Chain_Data>true&lt;/wd:Include_Management_Chain_Data>&#xD;&#xA;&lt;wd:Include_Organizations>true&lt;/wd:Include_Organizations>&#xD;&#xA;&lt;wd:Include_Personal_Information>true&lt;/wd:Include_Personal_Information>&#xD;&#xA;&lt;wd:Include_Qualifications>false&lt;/wd:Include_Qualifications>&#xD;&#xA;&lt;wd:Include_Reference>false&lt;/wd:Include_Reference>&#xD;&#xA;&lt;wd:Include_Related_Persons>false&lt;/wd:Include_Related_Persons>&#xD;&#xA;&lt;wd:Include_Roles>false&lt;/wd:Include_Roles>&#xD;&#xA;&lt;wd:Include_Skills>false&lt;/wd:Include_Skills>&#xD;&#xA;&lt;wd:Include_Succession_Profile>false&lt;/wd:Include_Succession_Profile>&#xD;&#xA;&lt;wd:Include_Talent_Assessment>false&lt;/wd:Include_Talent_Assessment>&#xD;&#xA;&lt;wd:Include_User_Account>true&lt;/wd:Include_User_Account>&#xD;&#xA;&lt;wd:Include_Worker_Documents>false&lt;/wd:Include_Worker_Documents>&#xD;&#xA;&lt;wd:Include_Transaction_Log_Data>true&lt;/wd:Include_Transaction_Log_Data>&#xD;&#xA;&lt;/wd:Response_Group>&#xD;&#xA;         &lt;/wd:Get_Workers_Request>&#xD;&#xA;&lt;/env:Body>&#xD;&#xA;&lt;/env:Envelope>"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/human_resourcesservice/Get_Workers"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean></Boolean>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Authorization" value="$application.accesstoken$"/>
+                    <entry key="Content-Type" value="application/xml"/>
+                    <entry key="X-IBM-Client-Id" value="1d39c88225c79f228a6859a91b4a1a94"/>
+                    <entry key="X-IBM-Client-Secret" value="8769072902801fb3f70dcb3217ea3e9e"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="POST"/>
+              <entry key="operationType" value="Account Aggregation"/>
+              <entry key="paginationSteps" value="TERMINATE_IF $response.Response_Results.Page$ >= $response.Response_Results.Total_Pages$&#xD;&#xA;$offset$ = $response.Response_Results.Page$ + 1&#xD;&#xA;$request.Response_Filter.Page.text()[1]$ = $offset$"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>20</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="Appointment Code" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Appointment_Code&apos;]]/wd:Value)"/>
+                    <entry key="AppointmentCode" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Appointment_Code&apos;]]/wd:Value)"/>
+                    <entry key="Business Process Type" value="(wd:Transaction_Log_Entry_Data/wd:Transaction_Log_Entry[wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;]])[1]/wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;]"/>
+                    <entry key="Date Join HDB" value="wd:Employment_Data/wd:Worker_Status_Data/wd:Hire_Date"/>
+                    <entry key="Date Left Service" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Date_Left_Service&apos;]]/wd:Value)"/>
+                    <entry key="Department Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Department_ID&apos;]]/wd:Value)"/>
+                    <entry key="Department Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Department_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Department Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Department_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="Designation Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Designation_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Designation Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Designation_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="Division Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Cluster_ID&apos;]]/wd:Value)"/>
+                    <entry key="Division Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Cluster_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Division Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Cluster_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="FirstName" value="wd:Personal_Data/wd:Name_Data/wd:Legal_Name_Data/wd:Name_Detail_Data/wd:First_Name"/>
+                    <entry key="FullName" value="wd:Personal_Data/wd:Name_Data/wd:Legal_Name_Data/wd:Name_Detail_Data/wd:Full_Name_for_Singapore_and_Malaysia"/>
+                    <entry key="Group Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Group_ID&apos;]]/wd:Value)"/>
+                    <entry key="Group Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Group_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Group Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Group_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="LastName" value="wd:Personal_Data/wd:Name_Data/wd:Legal_Name_Data/wd:Name_Detail_Data/wd:Last_Name"/>
+                    <entry key="Latest Business Process Effective Date" value="(wd:Transaction_Log_Entry_Data/wd:Transaction_Log_Entry[wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;  and (. = &apos;Transfer Employee&apos; or . = &apos;Change Job&apos; or . = &apos;Add Additional Job&apos; or . = &apos;Terminate Employee&apos; )]])[1]/wd:Transaction_Log_Data/wd:Transaction_Effective_Moment"/>
+                    <entry key="Latest Business Process Type" value="(wd:Transaction_Log_Entry_Data/wd:Transaction_Log_Entry[wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;  and (. = &apos;Transfer Employee&apos; or . = &apos;Change Job&apos; or . = &apos;Add Additional Job&apos; or . = &apos;Terminate Employee&apos; )]])[1] /wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;]"/>
+                    <entry key="Scheme of service" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Scheme_Of_Service&apos;]]/wd:Value)"/>
+                    <entry key="Section Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Section_ID&apos;]]/wd:Value)"/>
+                    <entry key="Section Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Section_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Section Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Section_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="Supervisor" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;HDB_Manager_ID&apos;]]/wd:Value)"/>
+                    <entry key="Team Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Team_ID&apos;]]/wd:Value)"/>
+                    <entry key="Team Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Team_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Team Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Team_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="User_ID" value="wd:User_ID"/>
+                    <entry key="WorkerID" value="wd:Worker_ID"/>
+                    <entry key="staffId" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Worker_HDB_ID&apos;]]/wd:Value)"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="//wd:Response_Data/wd:Worker/wd:Worker_Data"/>
+              <entry key="sequenceNumberForEndpoint" value="2"/>
+              <entry key="uniqueNameForEndPoint" value="Account Aggregation"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule" value="HDB_Workday_Before_Operation_Rule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA; &lt;env:Envelope xmlns:env=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;>&#xD;&#xA;&lt;env:Body>&#xD;&#xA;&lt;wd:Get_Workers_Request xmlns:wd=&quot;urn:com.workday/bsvc&quot; wd:version=&quot;v45.0&quot;>&#xD;&#xA;&lt;wd:Response_Filter>&#xD;&#xA;&lt;wd:Page>1&lt;/wd:Page>&#xD;&#xA;&lt;wd:Count>20&lt;/wd:Count>&#xD;&#xA;&lt;wd:As_Of_Effective_Date>${AS_OF_TO}&lt;/wd:As_Of_Effective_Date>&#xD;&#xA;&lt;/wd:Response_Filter>&#xD;&#xA;             &lt;wd:Request_Criteria>&#xD;&#xA;                 &lt;wd:Transaction_Log_Criteria_Data>&#xD;&#xA;&lt;wd:Transaction_Date_Range_Data>&#xD;&#xA;&lt;wd:Effective_From>2025-10-08T01:00:00.000-07:00&lt;/wd:Effective_From>&#xD;&#xA;&lt;wd:Effective_Through>2026-03-22T22:59:59.000-08:00&lt;/wd:Effective_Through>&#xD;&#xA;&lt;/wd:Transaction_Date_Range_Data>&#xD;&#xA;&lt;/wd:Transaction_Log_Criteria_Data>&#xD;&#xA;  &lt;wd:Organization_Reference>&#xD;&#xA;&lt;wd:ID wd:type=&quot;Organization_Reference_ID&quot;>S-10016637&lt;/wd:ID>&#xD;&#xA;&lt;/wd:Organization_Reference>&#xD;&#xA;                 &lt;wd:Include_Subordinate_Organizations>true&lt;/wd:Include_Subordinate_Organizations>&#xD;&#xA;                 &lt;wd:Field_And_Parameter_Criteria_Data>&#xD;&#xA;&lt;wd:Provider_Reference>&#xD;&#xA;&lt;wd:ID wd:type=&quot;Integration_System_ID&quot;>&#xD;&#xA;                            INTSG605_HDB_001_API_SailPoint_Get_Worker_Outbound&#xD;&#xA;&lt;/wd:ID>&#xD;&#xA;&lt;/wd:Provider_Reference>&#xD;&#xA;&lt;/wd:Field_And_Parameter_Criteria_Data>&#xD;&#xA;                 &lt;wd:Exclude_Inactive_Workers>false&lt;/wd:Exclude_Inactive_Workers>&#xD;&#xA;&lt;wd:Exclude_Employees>false&lt;/wd:Exclude_Employees>&#xD;&#xA;&lt;wd:Exclude_Contingent_Workers>false&lt;/wd:Exclude_Contingent_Workers>&#xD;&#xA;             &lt;/wd:Request_Criteria>&#xD;&#xA;             &lt;wd:Response_Group>&#xD;&#xA;&lt;wd:Include_Additional_Jobs>true&lt;/wd:Include_Additional_Jobs>&#xD;&#xA;&lt;wd:Exclude_Companies>false&lt;/wd:Exclude_Companies>&#xD;&#xA;&lt;wd:Exclude_Company_Hierarchies>true&lt;/wd:Exclude_Company_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Cost_Center_Hierarchies>false&lt;/wd:Exclude_Cost_Center_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Cost_Centers>false&lt;/wd:Exclude_Cost_Centers>&#xD;&#xA;&lt;wd:Exclude_Custom_Organizations>false&lt;/wd:Exclude_Custom_Organizations>&#xD;&#xA;&lt;wd:Exclude_Location_Hierarchies>true&lt;/wd:Exclude_Location_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Matrix_Organizations>true&lt;/wd:Exclude_Matrix_Organizations>&#xD;&#xA;&lt;wd:Exclude_Organization_Support_Role_Data>true&lt;/wd:Exclude_Organization_Support_Role_Data>&#xD;&#xA;&lt;wd:Exclude_Pay_Groups>true&lt;/wd:Exclude_Pay_Groups>&#xD;&#xA;&lt;wd:Exclude_Region_Hierarchies>true&lt;/wd:Exclude_Region_Hierarchies>&#xD;&#xA;&lt;wd:Exclude_Regions>true&lt;/wd:Exclude_Regions>&#xD;&#xA;&lt;wd:Exclude_Supervisory_Organizations>false&lt;/wd:Exclude_Supervisory_Organizations>&#xD;&#xA;&lt;wd:Exclude_Teams>true&lt;/wd:Exclude_Teams>&#xD;&#xA;&lt;wd:Include_Account_Provisioning>false&lt;/wd:Include_Account_Provisioning>&#xD;&#xA;&lt;wd:Include_Background_Check_Data>false&lt;/wd:Include_Background_Check_Data>&#xD;&#xA;&lt;wd:Include_Benefit_Eligibility>true&lt;/wd:Include_Benefit_Eligibility>&#xD;&#xA;&lt;wd:Include_Benefit_Enrollments>false&lt;/wd:Include_Benefit_Enrollments>&#xD;&#xA;&lt;wd:Include_Career>false&lt;/wd:Include_Career>&#xD;&#xA;&lt;wd:Include_Compensation>false&lt;/wd:Include_Compensation>&#xD;&#xA;&lt;wd:Include_Development_Items>false&lt;/wd:Include_Development_Items>&#xD;&#xA;&lt;wd:Include_Employee_Contract_Data>false&lt;/wd:Include_Employee_Contract_Data>&#xD;&#xA;&lt;wd:Include_Employee_Review>false&lt;/wd:Include_Employee_Review>&#xD;&#xA;&lt;wd:Include_Employment_Information>true&lt;/wd:Include_Employment_Information>&#xD;&#xA;&lt;wd:Include_Feedback_Received>false&lt;/wd:Include_Feedback_Received>&#xD;&#xA;&lt;wd:Include_Goals>false&lt;/wd:Include_Goals>&#xD;&#xA;&lt;wd:Include_Management_Chain_Data>true&lt;/wd:Include_Management_Chain_Data>&#xD;&#xA;&lt;wd:Include_Organizations>true&lt;/wd:Include_Organizations>&#xD;&#xA;&lt;wd:Include_Personal_Information>true&lt;/wd:Include_Personal_Information>&#xD;&#xA;&lt;wd:Include_Qualifications>false&lt;/wd:Include_Qualifications>&#xD;&#xA;&lt;wd:Include_Reference>false&lt;/wd:Include_Reference>&#xD;&#xA;&lt;wd:Include_Related_Persons>false&lt;/wd:Include_Related_Persons>&#xD;&#xA;&lt;wd:Include_Roles>false&lt;/wd:Include_Roles>&#xD;&#xA;&lt;wd:Include_Skills>false&lt;/wd:Include_Skills>&#xD;&#xA;&lt;wd:Include_Succession_Profile>false&lt;/wd:Include_Succession_Profile>&#xD;&#xA;&lt;wd:Include_Talent_Assessment>false&lt;/wd:Include_Talent_Assessment>&#xD;&#xA;&lt;wd:Include_User_Account>true&lt;/wd:Include_User_Account>&#xD;&#xA;&lt;wd:Include_Worker_Documents>false&lt;/wd:Include_Worker_Documents>&#xD;&#xA;&lt;wd:Include_Transaction_Log_Data>true&lt;/wd:Include_Transaction_Log_Data>&#xD;&#xA;&lt;/wd:Response_Group>&#xD;&#xA;         &lt;/wd:Get_Workers_Request>&#xD;&#xA;&lt;/env:Body>&#xD;&#xA;&lt;/env:Envelope>"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/human_resourcesservice/Get_Workers"/>
+              <entry key="curlCommand"/>
+              <entry key="curlEnabled">
+                <value>
+                  <Boolean></Boolean>
+                </value>
+              </entry>
+              <entry key="customAuthUrl"/>
+              <entry key="header">
+                <value>
+                  <Map>
+                    <entry key="Authorization" value="$application.accesstoken$"/>
+                    <entry key="Content-Type" value="application/xml"/>
+                    <entry key="X-IBM-Client-Id" value="1d39c88225c79f228a6859a91b4a1a94"/>
+                    <entry key="X-IBM-Client-Secret" value="8769072902801fb3f70dcb3217ea3e9e"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="httpMethodType" value="POST"/>
+              <entry key="operationType" value="Account Aggregation"/>
+              <entry key="paginationSteps" value="TERMINATE_IF $response.Response_Results.Page$ >= $response.Response_Results.Total_Pages$&#xD;&#xA;$offset$ = $response.Response_Results.Page$ + 1&#xD;&#xA;$request.Response_Filter.Page.text()[1]$ = $offset$"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>20</Integer>
+                </value>
+              </entry>
+              <entry key="parentEndpointName"/>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="Appointment Code" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Appointment_Code&apos;]]/wd:Value)"/>
+                    <entry key="AppointmentCode" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Appointment_Code&apos;]]/wd:Value)"/>
+                    <entry key="Business Process Type" value="(wd:Transaction_Log_Entry_Data/wd:Transaction_Log_Entry[wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;]])[1]/wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;]"/>
+                    <entry key="Date Left Service" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Date_Left_Service&apos;]]/wd:Value)"/>
+                    <entry key="Department Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Department_ID&apos;]]/wd:Value)"/>
+                    <entry key="Department Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Department_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Department Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Department_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="Designation Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Designation_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Designation Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Designation_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="Division Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Cluster_ID&apos;]]/wd:Value)"/>
+                    <entry key="Division Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Cluster_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Division Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Cluster_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="FirstName" value="wd:Personal_Data/wd:Name_Data/wd:Legal_Name_Data/wd:Name_Detail_Data/wd:First_Name"/>
+                    <entry key="FullName" value="wd:Personal_Data/wd:Name_Data/wd:Legal_Name_Data/wd:Name_Detail_Data/wd:Full_Name_for_Singapore_and_Malaysia"/>
+                    <entry key="Future Date Join HDB" value="wd:Employment_Data/wd:Worker_Status_Data/wd:Hire_Date"/>
+                    <entry key="Future User_ID" value="wd:User_ID"/>
+                    <entry key="Group Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Group_ID&apos;]]/wd:Value)"/>
+                    <entry key="Group Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Group_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Group Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Group_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="LastName" value="wd:Personal_Data/wd:Name_Data/wd:Legal_Name_Data/wd:Name_Detail_Data/wd:Last_Name"/>
+                    <entry key="Latest Business Process Effective Date" value="(wd:Transaction_Log_Entry_Data/wd:Transaction_Log_Entry[wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;  and (. = &apos;Transfer Employee&apos; or . = &apos;Change Job&apos; or . = &apos;Add Additional Job&apos; or . = &apos;Terminate Employee&apos; )]])[1]/wd:Transaction_Log_Data/wd:Transaction_Effective_Moment"/>
+                    <entry key="Latest Business Process Type" value="(wd:Transaction_Log_Entry_Data/wd:Transaction_Log_Entry[wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;  and (. = &apos;Transfer Employee&apos; or . = &apos;Change Job&apos; or . = &apos;Add Additional Job&apos; or . = &apos;Terminate Employee&apos; )]])[1] /wd:Transaction_Log_Data/wd:Transaction_Log_Type_Reference/wd:ID[@wd:type=&apos;Business_Process_Type&apos;]"/>
+                    <entry key="Scheme of service" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Scheme_Of_Service&apos;]]/wd:Value)"/>
+                    <entry key="Section Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Section_ID&apos;]]/wd:Value)"/>
+                    <entry key="Section Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Section_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Section Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Section_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="Supervisor" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;HDB_Manager_ID&apos;]]/wd:Value)"/>
+                    <entry key="Team Id" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Team_ID&apos;]]/wd:Value)"/>
+                    <entry key="Team Long Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Team_Long_Form&apos;]]/wd:Value)"/>
+                    <entry key="Team Short Form" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Team_Short_Form&apos;]]/wd:Value)"/>
+                    <entry key="WorkerID" value="wd:Worker_ID"/>
+                    <entry key="staffId" value="string(wd:Integration_Field_Override_Data[wd:Field_Reference/wd:ID[@wd:type=&apos;Integration_Document_Field_Name&apos; and text()=&apos;Worker_HDB_ID&apos;]]/wd:Value)"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>2**</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="//wd:Response_Data/wd:Worker/wd:Worker_Data"/>
+              <entry key="sequenceNumberForEndpoint" value="3"/>
+              <entry key="uniqueNameForEndPoint" value="Account Aggregation - Future"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+          </List>
+        </value>
+      </entry>
+      <entry key="createAccountWithEntReq">
+        <value>
+          <Boolean></Boolean>
+        </value>
+      </entry>
+      <entry key="enableHasMore" value="true"/>
+      <entry key="enableStatus"/>
+      <entry key="encrypted" value="accesstoken,refresh_token,oauth_token_info,client_secret,private_key,private_key_password,clientCertificate,clientKeySpec,resourceOwnerPassword,custom_auth_token_info"/>
+      <entry key="excludeFromMover">
+        <value>
+          <Boolean></Boolean>
+        </value>
+      </entry>
+      <entry key="fixedPlanMultivaluedAttribute" value="true"/>
+      <entry key="genericWebServiceBaseUrl" value="https://apiu2.hdb.gov.sg:9443/hdbt/apiu2"/>
+      <entry key="grant_type" value="JWT_BEARER"/>
+      <entry key="httpCookieSpecsStandard" value="true"/>
+      <entry key="isAAMSApp">
+        <value>
+          <Boolean></Boolean>
+        </value>
+      </entry>
+      <entry key="isGetObjectRequiredForPTA">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="lastAggregationDate_account" value="2026-02-04T06:12:40Z"/>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean></Boolean>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="oAuthJwtHeader">
+        <value>
+          <Map>
+            <entry key="alg" value="RS256"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="oAuthJwtPayload">
+        <value>
+          <Map>
+            <entry key="aud" value="wd"/>
+            <entry key="exp" value="5f"/>
+            <entry key="iss" value="NmU4Zjk2ZmItOTNiMS00ZmMwLTkzZjYtMzI3OTlmYjJiNzAx"/>
+            <entry key="sub" value="ISU_INTSG605_HDB_001"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="oauth_headers">
+        <value>
+          <Map>
+            <entry key="X-IBM-Client-Id" value="1d39c88225c79f228a6859a91b4a1a94"/>
+            <entry key="X-IBM-Client-Secret" value="8769072902801fb3f70dcb3217ea3e9e"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="oauth_token_info" value="1:ACP:OYIVEzzFMrBzeaiFHizcOMe70GmEUgflLD4nV7/ag9TzS61Ym3Ujz0ZepjKQft0Bh4YH90sRSZFz0g1e6iNPh2U76ZCmFYDGuM/LsTXmB6rcAa46bWIRO6dcPxSiQP7dCJmSKGbwlB9Qmn9SStucKsOh+p2rL8x1mT27920ys4GBT4LdVlnLLyodoYU9QcXYyKUvJ8mJtCrKzHHJBnDehb7N1pH9u388hdmOlyAKNHO8OthZct7b8UB7mqQBFFSSIeyJvrMRC2cGcvcoYwhXgvWlYIkmjqUQYtFZfIXv3GSoBvU+ajNbz7Nt2shyiq+AJIVNvxMIMrWclCstnzFQnMLokARsRzDJOa+Qi9FM16gbM2X9BmtqfHRqcF7zgJQiG99gzZ5C+FO/J5rZX4bM8OEVN2+rsLsDLaj5N9ym+FkkhLZw/3YYrNtZKUUZAxWO7fvaZ0dlMUVSgCcse3IqzjHO8jfY0BmjJXQi1WeKDaGYNOwX1eNIbBxsT2xLJvt16ElBS+1JTgKLf4CUWRr6soqyu3/pr281cstTqdsjoKr7ljp6j7sqgHmYZtjXAx53BkrBOxDReKuo8byBzZx0HsY3QMDkfhwYYIdlkSgzI+DLhmVMum/qXEPXCeq3xl/Ihab0AwGSG3Fsz1LBfWWKhq9hJfsxaudGKK1qpl8CQYhIcf31caaV2P83PwhPRew4ciULc9NNdtK3ThNf+wvxIiNpe8AD2qlB7t2BpJXj3JawiPY6EaBDl6rzoWPVh9nVc73DLjtDqjeniP34V3RZve6/WrQ0Ub8XIDs8A3xBkU81BPz9+nPA2tSridHro/0k7KIVotWl1pO5FiBO8HTfWlWQD9Lx3PkpzlL9VS+Vueki3eHZjeapMq3hYWaMAOEMEq6AcmN26NQ80mvUyTHobeL0P1RsGDc+ybyQKMhxsPwKpD9qNbDPrq4Fk6oCTzMNiyak9asx5NtS8nH+3wSu87SpRif4Z842Dk8W10Sri62JuST0mqLs5wz13Vz0B0Bavj5YtQBEzfvIOfa8fsUWo2cR/OdVL/+JKc/R5v65678aQoPmPIFnUuJgiZBjD62oxdWMP7YKzsOOlwPkjYoqc3azdWnqDu0gpRKiG529f717T09agBWBBPlmWjvf0MI4GoTRXJFpJchGg6pQVMWVEYrf4t1cb2X5LQyAGxvQF7AshbFJWw4NLPnhOMXBiZiJCyg+oK/7kRcnSZ4usy+Q6OBrkVhI/z+8gQu4EqKq0ZkU4FG4Mc3/BGuHvec/UtUxxPuYUHqJtLzKnP4pV8xddMoi+mtivIlDhWCrq4AvNODgP0ITlUtenZztenz9DJDSvh7BfIiVysk/zj7wv9oZJ3/pEnjpoSa4grNvlt3EB1ZFRdLewMxzCWqBioGEAZdID5hhHVYYFsa8EUnwnr94Bm09mr+V0WDzpFYzwddakmpMt5Ca0+pEhMrAJ4FDfR/ihXh18AZepHyRJ5cN6ES5qBtZ2sdficy2lrx4+SFcinogwMk/zFY+79D6q3GC2TiLNwX2xiCHn4BuoOsRQ6c+SrUOwkm50eUMnOSigs0d++ZXJXVZON43xe3/YcisruvG+pP4iB04tNuodLiSAiC/KksBcPsFsPVr1OFnwGtEIyBX5shWkhImkoM0OUj4MwyeuZe2qJZaA5G4DAR0lEbtpsk1j8+7qTIlzoz14quX1O7nqNw3AYy1GRF1toWlQsUT8JBfrnFxOTUeWCj1bicwUiYWFs8mgmCw3gMlo8kSAqw="/>
+      <entry key="privateKeyUploadedOn" value="18 Nov 2025 at 07:27:25 GMT"/>
+      <entry key="private_key" value="1:ACP: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"/>
+      <entry key="private_key_password" value="1:ACP:OXp0Vm94RrmKbdaVDc0gwK19D1fRUZaqeZ3eCw66Vy4="/>
+      <entry key="private_key_to_update"/>
+      <entry key="saml_assertion_url"/>
+      <entry key="saml_request_body"/>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US" value="Cumulus"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="Web Services"/>
+      <entry key="throwProvAfterRuleException">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="throwProvBeforeRuleException">
+        <value>
+          <Boolean>true</Boolean>
+        </value>
+      </entry>
+      <entry key="timeoutInSeconds"/>
+      <entry key="token_url" value="https://apiu2.hdb.gov.sg:9443/hdbt/apiu2/cp30-hrstaffenquiry-internet/receiveJWT"/>
+      <entry key="version" value="v2"/>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" id="0a49ce2592d11bb48192d1ebead300ff" name="spadmin"/>
+  </Owner>
+  <Schemas>
+    <Schema created="1763354256212" displayAttribute="WorkerID" groupAttribute="" id="0a49ce319a8112a4819a901aa3541629" identityAttribute="WorkerID" instanceAttribute="" modified="1770204692057" nativeObjectType="user" objectType="account" significantModified="1770204692057">
+      <AttributeDefinition name="FullName" type="string">
+        <Description>FullName</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="staffId" type="string">
+        <Description>staffId</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="FirstName" type="string">
+        <Description>FirstName</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="User_ID" type="string">
+        <Description>User_ID</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="LastName" type="string">
+        <Description>LastName</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="AppointmentCode" type="string">
+        <Description>AppointmentCode</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Group Short Form" type="string">
+        <Description>Group Short Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Group Long Form" type="string">
+        <Description>Group Long Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Department Long Form" type="string">
+        <Description>Department Long Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Section Long Form" type="string">
+        <Description>Section Long Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Team Long Form" type="string">
+        <Description>Team Long Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Scheme of service" type="string">
+        <Description>Scheme of service</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Division Id" type="string">
+        <Description>Division Id</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Department Short Form" type="string">
+        <Description>Department Short Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Section Short Form" type="string">
+        <Description>Section Short Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Team Short Form" type="string">
+        <Description>Team Short Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Date Join HDB" type="string">
+        <Description>Date Join HDB</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Date Left Service" type="string">
+        <Description>Date Left Service</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Group Id" type="string">
+        <Description>Group Id</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Department Id" type="string">
+        <Description>Department Id</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Section Id" type="string">
+        <Description>Section Id</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Team Id" type="string">
+        <Description>Team Id</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Division Short Form" type="string">
+        <Description>Division Short Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Division Long Form" type="string">
+        <Description>Division Long Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Email" type="string">
+        <Description>Email</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Type" type="string">
+        <Description>Type</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Supervisor" type="string">
+        <Description>Supervisor</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="WorkerID" type="string">
+        <Description>WorkerID</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="MiddleName" type="string">
+        <Description>MiddleName</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Title" type="string">
+        <Description>Title</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Designation Short Form" type="string">
+        <Description>Designation Short Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Designation Long Form" type="string">
+        <Description>Designation Long Form</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Business Process Type" type="string">
+        <Description>Business Process Type</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Latest Business Process Type" type="string">
+        <Description>Latest Business Process Type</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Latest Business Process Effective Date" type="string">
+        <Description>Latest Business Process Effective Date</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Future User_ID" type="string">
+        <Description>Future User_ID</Description>
+      </AttributeDefinition>
+      <AttributeDefinition name="Future Date Join HDB" type="string">
+        <Description>Future Date Join HDB</Description>
+      </AttributeDefinition>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard created="1763354256212" id="0a49ce319a8112a4819a901aa3541628" modified="1770204692057" significantModified="1770204692057"/>
+</Application>
