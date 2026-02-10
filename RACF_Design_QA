@@ -1,0 +1,12 @@
+Start
+│
+├─> Does RACF have a z/OS LDAP interface?
+│    ├─ Yes
+│    │   ├─ Is LDAP writable?
+│    │   │   ├─ Yes → RACF LDAP Connector possible
+│    │   │   └─ No → LDAP only for read, consider governance only
+│    └─ No
+│
+├─> Can we install Connector Gateway? Is it permitted to install SailPoint Mainframe Connector components on the z/OS system?
+│    ├─ Yes → Use RACF Mainframe Connector
+│    └─ No → Only LDAP read (governance) or flat file
