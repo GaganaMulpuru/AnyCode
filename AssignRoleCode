@@ -1,0 +1,35 @@
+import sailpoint.object.Identity;
+import sailpoint.object.ProvisioningPlan;
+import sailpoint.object.ProvisioningPlan.AccountRequest;
+import sailpoint.object.ProvisioningPlan.AttributeRequest;
+import sailpoint.api.Provisioner;
+
+// 1. Identify the user and the role
+String identityName = "john.doe"; // Target user
+String roleName = "Employee Role"; // Name of the role to add
+
+// 2. Create the Provisioning Plan
+ProvisioningPlan plan = new ProvisioningPlan();
+plan.setIdentity(context.getObjectByName(Identity.class, identityName));
+
+// 3. Create AccountRequest for IIQ Application
+AccountRequest accReq = new AccountRequest(
+    AccountRequest.Operation.Modify,
+    "IIQ", // Application Name
+    null,
+    null
+);
+
+// 4. Create AttributeRequest to Add the Role
+AttributeRequest attrReq = new AttributeRequest(
+    "assignedRoles", // Target Attribute
+    ProvisioningPlan.Operation.Add,
+    roleName // Role Name
+);
+accReq.add(attrReq);
+plan.add(accReq);
+
+// 5. Execute the Plan
+Provisioner provisioner = new Provisioner(context);
+provisioner.compile(plan);
+provisioner.execute();
