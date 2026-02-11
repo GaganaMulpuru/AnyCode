@@ -1,0 +1,4 @@
+select idn.extended1 as 'Staff ID', idn.display_name as 'User Name', bundle.name as 'Roles', bundle.extended6 as 'System ID', bundle.extended7 as 'System Name' 
+from spt_identity_bundles idnbundle 
+inner join spt_bundle bundle on idnbundle.bundle=bundle.id 
+inner join identityiq.spt_identity idn on idnbundle.identity_id=idn.id where bundle.name like 'SY68%'
