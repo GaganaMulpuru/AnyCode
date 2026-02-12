@@ -1,0 +1,23 @@
+import sailpoint.api.TaskManager;
+import sailpoint.object.TaskDefinition;
+import sailpoint.object.TaskResult;
+import java.util.HashMap;
+import java.util.Map;
+
+// 1. Get the TaskDefinition for "Refresh Identity Cube"
+TaskDefinition taskDef = context.getObjectByName(TaskDefinition.class, "Refresh Identity Cube");
+
+if (taskDef != null) {
+    // 2. Define arguments for the task
+    Map<String, Object> args = new HashMap<String, Object>();
+    args.put("correlateEntitlements", true);
+    args.put("promoteAttributes", true);
+    args.put("refreshManagerStatus", true);
+    // Optional: Only refresh specific identities
+    // args.put("filter", "name == 'John.Doe'");
+
+    // 3. Run the task synchronously
+    TaskManager tm = new TaskManager(context);
+    TaskResult result = tm.runSync(taskDef, args);
+    System.out.println("Task completed with status: " + result.getCompletionStatus());
+}
